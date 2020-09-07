@@ -12,6 +12,7 @@ import os
 from setuptools import find_packages, setup
 
 readme = open('README.rst').read()
+history = open('CHANGES.rst').read()
 
 tests_require = [
     'check-manifest>=0.25',
@@ -67,16 +68,22 @@ install_requires = [
     'Faker>=2.0.3',
     'Flask-BabelEx>=0.9.4',
     'idutils>=1.1.7',
-    
     'invenio-assets>=1.2.2',
     'invenio-communities>=2.0.4',
     'invenio-drafts-resources>=0.1.3',
-    
-    'invenio-records-rest>=1.1.0',
-    
+    'invenio-formatter[badges]>=1.1.0a1',
+    'invenio-jsonschemas>=1.1.0',
+    'invenio-pidstore>=1.2.1',
+    'invenio-records-rest>=1.7.1',
+    'invenio-records>=1.3.2',
+    'invenio-records-files>=1.2.1',
+    'invenio-records-permissions>=0.9.0',
+    'invenio-records-resources>=0.3.2',
+    'invenio-records-ui>=1.2.0a1',
+    'invenio-previewer>=1.2.1',
     'marshmallow>=3.3.0'
     'pycountry>=18.12.8',
-    'six>=1.12.0'
+    'six>=1.12.0'  # Needed to pass CI tests
 ]
 
 packages = find_packages()
