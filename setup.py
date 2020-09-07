@@ -35,11 +35,8 @@ extras_require = {
         'Sphinx>=1.5.1',
     ],
     # Elasticsearch version
-    'elasticsearch5': [
-        'invenio-search[elasticsearch5]>={}'.format(invenio_search_version),
-    ],
-    'elasticsearch6': [
-        'invenio-search[elasticsearch6]>={}'.format(invenio_search_version),
+    'elasticsearch7': [
+        'invenio-search[elasticsearch7]>={}'.format(invenio_search_version),
     ],
     # Databases
     'mysql': [
@@ -53,7 +50,7 @@ extras_require = {
 
 extras_require['all'] = []
 for name, reqs in extras_require.items():
-    if name[0] == ':' or name in ('elasticsearch5', 'elasticsearch6', 'mysql',
+    if name[0] == ':' or name in ('elasticsearch7', 'mysql',
                                   'postgresql'):
         continue
     extras_require['all'].extend(reqs)
@@ -64,9 +61,22 @@ setup_requires = [
 ]
 
 install_requires = [
-    'Flask-BabelEx>=0.9.3',
-    'invenio-records-rest>=1.1.0,<1.3.0',
-    'arrow>=0.12.1',
+    'arrow>=0.13.0',
+    'CairoSVG>=1.0.20',
+    'edtf>=4.0.1',
+    'Faker>=2.0.3',
+    'Flask-BabelEx>=0.9.4',
+    'idutils>=1.1.7',
+    
+    'invenio-assets>=1.2.2',
+    'invenio-communities>=2.0.4',
+    'invenio-drafts-resources>=0.1.3',
+    
+    'invenio-records-rest>=1.1.0',
+    
+    'marshmallow>=3.3.0'
+    'pycountry>=18.12.8',
+    'six>=1.12.0'
 ]
 
 packages = find_packages()
@@ -106,7 +116,7 @@ setup(
             'invenio_dm_tugraz = invenio_dm_tugraz.jsonschemas'
         ],
         'invenio_search.mappings': [
-            'records = invenio_dm_tugraz.mappings'
+            'dmrec = invenio_dm_tugraz.mappings',
         ],
     },
     extras_require=extras_require,
