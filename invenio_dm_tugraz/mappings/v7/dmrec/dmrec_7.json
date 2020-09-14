@@ -17,6 +17,12 @@
       "id": {
         "type": "double"
       },
+      "owners": {
+        "type": "string"
+      },
+      "contactnum": {
+        "type": "double"
+      },
       "keywords": {
         "type": "keyword"
       },

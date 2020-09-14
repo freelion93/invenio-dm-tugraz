@@ -13,6 +13,12 @@
       "description": "Invenio record identifier (integer).",
       "type": "number"
     },
+    "owners": {
+      "type": "string"
+    },
+    "contactnum": {
+      "type": "integer"
+    },
     "keywords": {
       "description": "Free text keywords.",
       "items": {
@@ -70,23 +76,12 @@
           "role": {
             "description": "",
             "type": "string",
-            "enum": [
-              "ContactPerson",
-              "Researcher",
-              "Other"
-            ]
+            "enum": ["ContactPerson", "Researcher", "Other"]
           }
         },
-        "required": [
-          "name"
-        ]
-
+        "required": ["name"]
       }
     }
   },
-  "required": [
-    "id",
-    "contributors",
-    "title"
-  ]
+  "required": ["id", "contributors", "title"]
 }

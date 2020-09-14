@@ -124,6 +124,7 @@ setup(
         ],
         'invenio_search.mappings': [
             'dmrec = invenio_dm_tugraz.mappings',
+            # 'dmdrafts = invenio_rdm_records.mappings.drafts',
         ],
     },
     extras_require=extras_require,
