@@ -3,66 +3,23 @@
     "date_detection": false,
     "numeric_detection": false,
     "properties": {
-      "theschema": {
-        "type": "text",
-        "index": false
-      },
-      "title": {
-        "type": "text",
-        "copy_to": "suggest_title"
-      },
-      "suggest_title": {
-        "type": "completion"
-      },
-      "id": {
-        "type": "double"
-      },
-      "owners": {
-        "type": "string"
-      },
-      "contactnum": {
-        "type": "double"
-      },
-      "keywords": {
-        "type": "keyword"
-      },
-      "publication_date": {
-        "type": "date",
-        "format": "date"
-      },
-      "contributors": {
+      "_access": {
         "type": "object",
         "properties": {
-          "ids": {
-            "type": "object",
-            "properties": {
-              "source": {
-                "type": "text"
-              },
-              "value": {
-                "type": "keyword"
-              }
-            }
+          "metadata_restricted": {
+            "type": "boolean"
           },
-          "affiliations": {
-            "type": "text"
-          },
-          "role": {
-            "type": "text"
-          },
-          "email": {
-            "type": "text"
-          },
-          "name": {
-            "type": "text"
+          "files_restricted": {
+            "type": "boolean"
           }
         }
       },
-      "_created": {
-        "type": "date"
+      "testOption": {
+        "type": "integer"
       },
-      "_updated": {
-        "type": "date"
+      "$schema": {
+        "type": "keyword",
+        "index": false
       }
     }
   }
